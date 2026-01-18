@@ -23,3 +23,14 @@ The **version** of Golang that this program's source-code uses is defined in its
 ## Coding Style
 
 In general use `gofmt`, with the exception of when things need to be aligned across multiple lines to increase human-legibility of the source-code.
+
+## Error Handling
+
+In general, do _not_ used the Go built-in packages for **error handling**.
+I.e., in general, do not use the Go built-in `"errors"` package, and the `fmt.Errorf()` function from the Go built-in `"fmt"` package.
+
+Instead use the following package for **error handling**:
+
+* https://codeberg.org/reiver/go-erorr
+
+
