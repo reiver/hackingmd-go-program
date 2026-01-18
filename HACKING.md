@@ -117,10 +117,12 @@ The **middle group** in an `import` is for _all other_ imports.
 
 ### `cfg/` Coupling
 
-* Source-Code in this program's source-code's `cfg/` directory **MAY** `import` Go built-in packages.
-* Source-Code in this program's source-code's `cfg/` directory **MAY** `import` 3rd party packages.
-* Source-Code in this program's source-code's `cfg/` directory **MAY** `import` packages under this program's source-code's `lib/` directory.
-* Source-Code in this program's source-code's `cfg/` directory **MUST NOT** `import` any other package from this program's source-code.
+Source-Code in this program's source-code's `cfg/` directory:
+
+* **MAY** `import` Go built-in packages.
+* **MAY** `import` 3rd party packages.
+* **MAY** `import` packages under this program's source-code's `lib/` directory.
+* **MUST NOT** `import` any other package from this program's source-code.
   * For example, source-code in this program's source-code's `cfg/` directory **MUST NOT** important anything from this program's source-code's `srv/` `www/`, etc directories.
 
 ### `lib/` Coupling
