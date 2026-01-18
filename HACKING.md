@@ -127,10 +127,12 @@ Source-Code in this program's source-code's `cfg/` directory:
 
 ### `lib/` Coupling
 
-* Source-Code in this program's source-code's `lib/` directory **MAY** `import` Go built-in packages.
-* Source-Code in this program's source-code's `lib/` directory **MAY** `import` 3rd party packages.
-* Source-Code in this program's source-code's `lib/` directory **MAY** `import` other packages under this program's source-code's `lib/` directory.
-* Source-Code in this program's source-code's `lib/` directory **MUST NOT** import any package in this program's source-code that is outside of the `lib/` directory.
+Source-Code in this program's source-code's `lib/` directory:
+
+* **MAY** `import` Go built-in packages.
+* **MAY** `import` 3rd party packages.
+* **MAY** `import` other packages under this program's source-code's `lib/` directory.
+* **MUST NOT** import any package in this program's source-code that is outside of the `lib/` directory.
   * For example, source-code in this program's source-code's `lib/` directory **MUST NOT** important anything from this program's source-code's `cfg/`, `srv/` `www/`, etc directories.
 
 ### `srv/` Coupling
