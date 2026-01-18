@@ -16,6 +16,6 @@ The following shows the file-system structure that this program's source-code fo
   * 📄 `HACKING.md` — this file
   * 📄 `README.md`
 
-# Go Version
+## Go Version
 
-The **version** of Golang that this program's source-code uses is defined in its `go.mod` file.
+The **version** of Golang that this program's source-code uses is defined in its `go.mod` file
