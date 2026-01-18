@@ -11,4 +11,7 @@ The following shows the file-system structure that this program's source-code fo
   * 📂 `lib/` — libraries
   * 📂 `srv/` — services
   * 📂 `www/` — HTTP handlers
-
+  * 📄 `go.mod`
+  * 📄 `go.sum`
+  * 📄 `HACKING.md` — this file
+  * 📄 `README.md`
