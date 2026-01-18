@@ -22,7 +22,7 @@ The following shows the file-system structure that this program's source-code fo
 
 The **version** of Golang that this program's source-code uses is specified in its `go.mod` file.
 
-For example, if a `go.mod` file was:
+For example, if the content of a `go.mod` file was:
 
 ```
 module example.com/joeblow/myprogram
@@ -41,7 +41,7 @@ To discover the **version** of Golang that this program's source-code uses, look
 
 The **module name** of this program's source-code is specified in its `go.mod` file.
 
-For example, if a `go.mod` file was:
+For example, if the content of a `go.mod` file was:
 
 ```
 module example.com/joeblow/myprogram
