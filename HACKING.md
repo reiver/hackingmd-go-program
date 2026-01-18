@@ -7,12 +7,12 @@ This program is written in the **Go programming-language** (**Golang**).
 The following shows the file-system structure that this program's source-code follows:
 
 * 📂 `.`
-  * 📂 `cfg/` — configurations
-  * 📂 `lib/` — libraries
-  * 📂 `srv/` — services
-    * 📂 `log/` — logging service
-  * 📂 `www/` — HTTP handlers
-  * 📄 `HACKING.md` — this file
+  * 📂 `cfg/` — configurations.
+  * 📂 `lib/` — libraries.
+  * 📂 `srv/` — services.
+    * 📂 `log/` — logging service. (package name `logsrv`.)
+  * 📂 `www/` — HTTP handlers. (all package names in and under this are `verboten`.)
+  * 📄 `HACKING.md` — imports this file, and possibly include extra information about this program that is not included in this file.
   * 📄 `README.md`
   * 📄 `go.mod`
   * 📄 `go.sum`
