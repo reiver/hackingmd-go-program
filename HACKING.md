@@ -60,6 +60,8 @@ To discover the **module name** that this program's source-code uses, look at th
 
 In general use `gofmt`, with the exception of when things need to be aligned across multiple lines to increase human-legibility of the source-code.
 
+I.e., prefer human-legibility over always following the source-code formatting rules of `gofmt`.
+
 ## Error Handling
 
 In general, do _not_ use the Go built-in packages for **error handling**.
