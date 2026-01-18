@@ -33,4 +33,10 @@ Instead use the following package for **error handling**:
 
 * https://codeberg.org/reiver/go-erorr
 
+## Logging
 
+In general, do _not_ used the Go built-in packages for **logging**.
+
+Instead use the following package for **logging**:
+
+* https://codeberg.org/reiver/go-log
