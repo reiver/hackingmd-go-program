@@ -19,3 +19,7 @@ The following shows the file-system structure that this program's source-code fo
 ## Go Version
 
 The **version** of Golang that this program's source-code uses is defined in its `go.mod` file
+
+## Coding Style
+
+In general use `gofmt`, with the exception of when things need to be aligned across multiple lines to increase human-legibility of the source-code.
