@@ -92,12 +92,12 @@ import (
 	"github.com/microcosm-cc/bluemonday"
 	"github.com/yuin/goldmark"
 
-	"srchost.tld/prgm/cfg"
-	"srchost.tld/prgm/src/log"
+	"example.com/joeblow/myprogram/cfg"
+	"example.com/joeblow/myprogram/src/log"
 )
 ```
 
-(Note that in this example, `"srchost.tld/prgm"` represents the that program _module name_.
+(Note that in this _example_, `"example.com/joeblow/myprogram"` represents this _example_ program's _module name_.
 In the actual source-code for this program, you would use this program's actual _module name_ — which is specified in this program's `go.mod` file.)
 
 The **top group** in an `import` is for Go built-in packages.
