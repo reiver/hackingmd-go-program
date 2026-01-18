@@ -22,6 +22,40 @@ The following shows the file-system structure that this program's source-code fo
 
 The **version** of Golang that this program's source-code uses is specified in its `go.mod` file.
 
+For example, if a `go.mod` file was:
+
+```
+module example.com/joeblow/myprogram
+
+go 1.25.7
+
+require github.com/gorilla/websocket v1.5.0
+```
+
+Then the _Go version_ would be `1.25.7`.
+
+However, that was just a fictitious example.
+To discover the **version** of Golang that this program's source-code uses, look at this program's source-code's `go.mod` file.
+
+## Go Module Name
+
+The **module name** of this program's source-code is specified in its `go.mod` file.
+
+For example, if a `go.mod` file was:
+
+```
+module example.com/joeblow/myprogram
+
+go 1.25.7
+
+require github.com/gorilla/websocket v1.5.0
+```
+
+Then the _module name_ would be `example.com/joeblow/myprogram`.
+
+However, that was just a fictitious example.
+To discover the **module name** that this program's source-code uses, look at this program's source-code's `go.mod` file.
+
 ## Coding Style
 
 In general use `gofmt`, with the exception of when things need to be aligned across multiple lines to increase human-legibility of the source-code.
@@ -76,9 +110,16 @@ The **middle group** in an `import` is for _all other_ imports.
 
 ### `lib/` Coupling
 
-Source-Code in `lib/` directory MUST NOT import anything package in this program that is outside of the `lib/` directory.
-For example, source-code in the `lib/` directory MUST NOT important anything from this program's source-code's `cfg/`, `srv/` `www/`, etc directories.
+* Source-Code in this program's source-code's `lib/` directory **MAY** `import` Go built-in packages.
+* Source-Code in this program's source-code's `lib/` directory **MAY** `import` 3rd party packages.
+* Source-Code in this program's source-code's `lib/` directory **MAY** `import` other things in this program's source-code's `lib/` directory.
+* Source-Code in this program's source-code's `lib/` directory **MUST NOT** import any package in this program's source-code that is outside of the `lib/` directory.
+  * For example, source-code in this program's source-code's `lib/` directory **MUST NOT** important anything from this program's source-code's `cfg/`, `srv/` `www/`, etc directories.
 
-* Source-Code in the `lib/` directory MAY import Go built-in packages.
-* Source-Code in the `lib/` directory MAY import 3rd party packages.
-* Source-Code in the `lib/` directory MAY import other things in this program's source-code's `lib/` directory.
+### `srv/` Coupling
+
+* Source-Code in this program's source-code's `srv/` directory **MAY** `import` Go built-in packages.
+* Source-Code in this program's source-code's `srv/` directory **MAY** `import` 3rd party packages.
+* Source-Code in this program's source-code's `srv/` directory **MAY** `import` this program's source-code's `cfg/` directory.
+* Source-Code in this program's source-code's `srv/` directory **MAY** `import` packages from this program's source-code's `lib/` directory.
+* Source-Code in this program's source-code's `srv/` directory **MUST NOT** `import` any other package from this program's source-code.
