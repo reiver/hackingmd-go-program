@@ -108,11 +108,19 @@ The **middle group** in an `import` is for _all other_ imports.
 
 ## Coupling
 
+### `cfg/` Coupling
+
+* Source-Code in this program's source-code's `cfg/` directory **MAY** `import` Go built-in packages.
+* Source-Code in this program's source-code's `cfg/` directory **MAY** `import` 3rd party packages.
+* Source-Code in this program's source-code's `cfg/` directory **MAY** `import` packages under this program's source-code's `lib/` directory.
+* Source-Code in this program's source-code's `cfg/` directory **MUST NOT** `import` any other package from this program's source-code.
+  * For example, source-code in this program's source-code's `cfg/` directory **MUST NOT** important anything from this program's source-code's `srv/` `www/`, etc directories.
+
 ### `lib/` Coupling
 
 * Source-Code in this program's source-code's `lib/` directory **MAY** `import` Go built-in packages.
 * Source-Code in this program's source-code's `lib/` directory **MAY** `import` 3rd party packages.
-* Source-Code in this program's source-code's `lib/` directory **MAY** `import` other things in this program's source-code's `lib/` directory.
+* Source-Code in this program's source-code's `lib/` directory **MAY** `import` other packages under this program's source-code's `lib/` directory.
 * Source-Code in this program's source-code's `lib/` directory **MUST NOT** import any package in this program's source-code that is outside of the `lib/` directory.
   * For example, source-code in this program's source-code's `lib/` directory **MUST NOT** important anything from this program's source-code's `cfg/`, `srv/` `www/`, etc directories.
 
@@ -121,5 +129,5 @@ The **middle group** in an `import` is for _all other_ imports.
 * Source-Code in this program's source-code's `srv/` directory **MAY** `import` Go built-in packages.
 * Source-Code in this program's source-code's `srv/` directory **MAY** `import` 3rd party packages.
 * Source-Code in this program's source-code's `srv/` directory **MAY** `import` this program's source-code's `cfg/` directory.
-* Source-Code in this program's source-code's `srv/` directory **MAY** `import` packages from this program's source-code's `lib/` directory.
+* Source-Code in this program's source-code's `srv/` directory **MAY** `import` packages under this program's source-code's `lib/` directory.
 * Source-Code in this program's source-code's `srv/` directory **MUST NOT** `import` any other package from this program's source-code.
