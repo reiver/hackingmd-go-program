@@ -19,7 +19,7 @@ The following shows the file-system structure that this program's source-code fo
 
 ## Go Version
 
-The **version** of Golang that this program's source-code uses is specified in its `go.mod` file
+The **version** of Golang that this program's source-code uses is specified in its `go.mod` file.
 
 ## Coding Style
 
@@ -41,3 +41,33 @@ In general, do _not_ used the Go built-in packages for **logging**.
 Instead use the following package for **logging**:
 
 * https://codeberg.org/reiver/go-log
+
+## Imports
+
+Imports have 3 groups.
+For example:
+
+```golang
+import (
+	"fmt"
+	"io"
+
+	"codeberg.org/reiver/go-erorr"
+	"codeberg.org/reiver/go-log"
+	"github.com/microcosm-cc/bluemonday"
+	"github.com/yuin/goldmark"
+
+	"srchost.tld/prgm/cfg"
+	"srchost.tld/prgm/src/log"
+)
+```
+
+(Note that in this example, `"srchost.tld/prgm"` represents the that program _module name_.
+In the actual source-code for this program, you would use this program's actual _module name_ — which is specified in this program's `go.mod` file.)
+
+The **top group** in an `import` is for Go built-in packages.
+
+The **bottom group** in an `import` is for packages in this program's source-code.
+
+The **middle group** in an `import` is for _all other_ imports.
+
