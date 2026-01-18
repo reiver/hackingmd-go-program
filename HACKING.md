@@ -137,8 +137,10 @@ Source-Code in this program's source-code's `lib/` directory:
 
 ### `srv/` Coupling
 
-* Source-Code in this program's source-code's `srv/` directory **MAY** `import` Go built-in packages.
-* Source-Code in this program's source-code's `srv/` directory **MAY** `import` 3rd party packages.
-* Source-Code in this program's source-code's `srv/` directory **MAY** `import` this program's source-code's `cfg/` directory.
-* Source-Code in this program's source-code's `srv/` directory **MAY** `import` packages under this program's source-code's `lib/` directory.
-* Source-Code in this program's source-code's `srv/` directory **MUST NOT** `import` any other package from this program's source-code.
+Source-Code in this program's source-code's `srv/` directory :
+
+* **MAY** `import` Go built-in packages.
+* **MAY** `import` 3rd party packages.
+* **MAY** `import` this program's source-code's `cfg/` directory.
+* **MAY** `import` packages under this program's source-code's `lib/` directory.
+* **MUST NOT** `import` any other package from this program's source-code.
