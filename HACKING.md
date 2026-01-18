@@ -10,6 +10,7 @@ The following shows the file-system structure that this program's source-code fo
   * 📂 `cfg/` — configurations
   * 📂 `lib/` — libraries
   * 📂 `srv/` — services
+    * 📂 `log/` — logging service
   * 📂 `www/` — HTTP handlers
   * 📄 `HACKING.md` — this file
   * 📄 `README.md`
