@@ -18,7 +18,7 @@ The following shows the file-system structure that this program's source-code fo
 
 ## Go Version
 
-The **version** of Golang that this program's source-code uses is defined in its `go.mod` file
+The **version** of Golang that this program's source-code uses is specified in its `go.mod` file
 
 ## Coding Style
 
