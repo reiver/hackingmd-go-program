@@ -62,7 +62,7 @@ In general use `gofmt`, with the exception of when things need to be aligned acr
 
 ## Error Handling
 
-In general, do _not_ used the Go built-in packages for **error handling**.
+In general, do _not_ use the Go built-in packages for **error handling**.
 I.e., in general, do not use the Go built-in `"errors"` package, and the `fmt.Errorf()` function from the Go built-in `"fmt"` package.
 
 Instead use the following package for **error handling**:
@@ -71,7 +71,8 @@ Instead use the following package for **error handling**:
 
 ## Logging
 
-In general, do _not_ used the Go built-in packages for **logging**.
+In general, do _not_ use the Go built-in packages for **logging**.
+I.e., in general, do not use the Go built-in `"log"` package, do not use the Go built-in `"log/slog"` package, and do not use the Go built-in `"log/syslog"` package.
 
 Instead use the following package for **logging**:
 
