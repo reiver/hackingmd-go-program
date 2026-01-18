@@ -80,6 +80,10 @@ Instead use the following package for **logging**:
 
 * https://codeberg.org/reiver/go-log
 
+### Logging Service
+
+A logger of this type is available through the **logging service**.
+
 ## Imports
 
 Imports have 3 groups.
