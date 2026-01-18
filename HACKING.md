@@ -72,3 +72,13 @@ The **bottom group** in an `import` is for packages in this program's source-cod
 
 The **middle group** in an `import` is for _all other_ imports.
 
+## Coupling
+
+### `lib/` Coupling
+
+Source-Code in `lib/` directory MUST NOT import anything package in this program that is outside of the `lib/` directory.
+For example, source-code in the `lib/` directory MUST NOT important anything from this program's source-code's `cfg/`, `srv/` `www/`, etc directories.
+
+* Source-Code in the `lib/` directory MAY import Go built-in packages.
+* Source-Code in the `lib/` directory MAY import 3rd party packages.
+* Source-Code in the `lib/` directory MAY import other things in this program's source-code's `lib/` directory.
